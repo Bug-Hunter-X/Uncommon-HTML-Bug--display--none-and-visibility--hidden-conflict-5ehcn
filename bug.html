@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+
+  <script>
+    // Bug: Incorrect use of display: none and visibility: hidden
+    document.getElementById("myDiv").style.display = "none";
+    document.getElementById("myDiv").style.visibility = "hidden"; 
+
+    // The intention is to initially hide the div, but the combination of display: none and visibility: hidden creates an unusual behavior
+    //  where visibility: hidden may override display: none causing unexpected issues. (in this case, it might work as intended, but can cause issue in other situations) 
+  </script>
+</body>
+</html>
