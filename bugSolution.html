@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+
+  <script>
+    // Solution: Use only display: none (or visibility: hidden, depending on the desired behavior)
+    document.getElementById("myDiv").style.display = "none"; //This is sufficient
+    //document.getElementById("myDiv").style.visibility = "hidden"; //Remove this line
+  </script>
+</body>
+</html>
